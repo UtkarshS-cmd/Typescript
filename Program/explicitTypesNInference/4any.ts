@@ -17,3 +17,9 @@ console.log(something);
 // Create interfaces for complex objects
 // Use type guards for runtime type checking
 // Enable noImplicitAny in your tsconfig.json
+
+// When to use any:
+
+// When migrating JavaScript code to TypeScript
+// When working with dynamic content where the type is unknown
+// When you need to opt out of type checking for a specific case
