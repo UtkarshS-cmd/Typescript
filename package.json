@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "dev": "npx ts-node Program/hello.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
