@@ -1,0 +1,1 @@
+interface Animal { name: string; } interface Animal { age: number; } const dog: Animal = { name: "Fido", age: 5 };
