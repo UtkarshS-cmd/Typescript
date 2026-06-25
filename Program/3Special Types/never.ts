@@ -10,6 +10,9 @@ function throwError(message : string) : never {
 }
 
 // 2.Exhaustivness checking with unions
+type Circle = { kind: 'circle'; radius: number };
+type Square = { kind: 'square'; sideLength: number };
+type Triangle = { kind: 'triangle'; base: number; height: number };
 type Shape = Circle | Square | Triangle;
 
 function getArea(shape: Shape): number {
@@ -18,6 +21,8 @@ function getArea(shape: Shape): number {
       return Math.PI * shape.radius ** 2;
     case 'square':
       return shape.sideLength ** 2;
+    case 'triangle':
+      return (shape.base * shape.height) / 2;
     default:
       // TypeScript knows this should never happen
       const _exhaustiveCheck: never = shape;
@@ -25,8 +30,9 @@ function getArea(shape: Shape): number {
   }
 }
 
-// 3 basic never type
-let x: never = true; // Error: Type 'boolean' is not assignable to type 'never'.
+// 3 basic never type - demonstrating that never cannot hold any value
+// The following line is intentionally commented to show never's nature
+// let x: never = true; // Error: Type 'boolean' is not assignable to type 'never'.
 
 // When to use never:
 

@@ -23,9 +23,11 @@ interface User {
 //Nullish coalescing and opitonal Chaining
 
 // Nullish coalescing (??) - only uses default if value is null or undefined
+const input: string | null = null;
 const value = input ?? 'default';
 console.log(value);
 
 // Optional chaining (?.) - safely access nested properties
+const user = { address: { street: 'Main St' } };
 const street = user?.address?.street;
 console.log(street);
