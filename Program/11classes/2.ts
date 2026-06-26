@@ -1,16 +1,28 @@
-// members visibility -> public, private, protected
+// // members visibility -> public, private, protected
 
-class Person {
-  private name: string;
+// class Person {
+//   private name: string;
 
-  public constructor(name: string) {
-    this.name = name;
+//   public constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   public getName(): string {
+//     return this.name;
+//   }
+// }
+
+// const person = new Person("Jane");
+// console.log(person.getName()); // person.name isn't accessible from outside the class since it's private kkkkkjkh
+
+class animal {
+  public name: string;
+
+  public constructor(name : string){
+    this.name = name
   }
 
-  public getName(): string {
-    return this.name;
+  public getName(): string{
+    return this.name
   }
 }
-
-const person = new Person("Jane");
-console.log(person.getName()); // person.name isn't accessible from outside the class since it's private kkkkkjkh
