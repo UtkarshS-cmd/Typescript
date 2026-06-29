@@ -15,6 +15,7 @@ const menu: Pizza[] = [
     { id: 2, name: "Pepperoni", price: 10 },
     { id: 3, name: "Hawaiian", price: 10 },
     { id: 4, name: "Veggie", price: 9 },
+    { id: 5, name: "Meat Lovers", price: 11 }
 ]
 
 let cashInRegister = 100
@@ -26,7 +27,7 @@ function addNewPizza(pizzaObj: Pizza) {
 }
 
 function placeOrder(pizzaName: string) {
-    const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
+    const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName) //find pizza in list
     if (!selectedPizza) {
         console.error(`${pizzaName} does not exist in the menu`)
         return
